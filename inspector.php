@@ -13,9 +13,27 @@ function_exists('curl_version') || die('Error, php curl extension is required')
 </head>
 <body>
 <div class="container">
+     <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href=""><?php echo "$app_name $app_version"; ?></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://github.com/pi0/httpinspector">View On GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-    <h1><?php echo "$app_name $app_version"; ?></h1>
-    <p>Developed by <?php echo $app_developer ?></p>
     <br>
     <div>
         <form class="form form-horizontal" method="get">
@@ -117,7 +135,12 @@ function_exists('curl_version') || die('Error, php curl extension is required')
                 }
             ?>
         </table>
-    <?php } ?>
+    <?php } ?>		
+<br>
+<hr>
+<p>Developed by <?php echo $app_developer ?></p>
+
+
 </div>
-</body>
+   </body>
 </html>
